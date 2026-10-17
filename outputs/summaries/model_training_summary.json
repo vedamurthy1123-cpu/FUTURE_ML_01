@@ -1,0 +1,115 @@
+{
+  "dataset": "superstore_features.csv",
+  "training_months": 29,
+  "testing_months": 7,
+  "best_model_name": "Extra Trees",
+  "best_model_metrics": {
+    "test_mae": 15942.648412938272,
+    "test_rmse": 18103.976006660767,
+    "test_mape": 21.03835013133947,
+    "test_r2": 0.37081516171065976,
+    "train_mae": 1109.0074611668056,
+    "train_rmse": 1628.5388454939225,
+    "train_r2": 0.9939823444526975
+  },
+  "baseline_metrics": {
+    "test_mae": 19342.36387142857,
+    "test_rmse": 22211.75151428613,
+    "test_mape": 25.17070992012456,
+    "test_r2": 0.05289979501560371
+  },
+  "improvement_over_baseline_pct": 18.493703681960106,
+  "beats_baseline": true,
+  "all_model_comparison": [
+    {
+      "Model": "Extra Trees",
+      "Train_MAE": 1109.0074611668056,
+      "Test_MAE": 15942.648412938272,
+      "Train_RMSE": 1628.5388454939225,
+      "Test_RMSE": 18103.976006660767,
+      "Train_MAPE": 3.166256533947605,
+      "Test_MAPE": 21.03835013133947,
+      "Train_R2": 0.9939823444526975,
+      "Test_R2": 0.37081516171065976
+    },
+    {
+      "Model": "Ridge Regression",
+      "Train_MAE": 6894.920180858113,
+      "Test_MAE": 13226.093821794362,
+      "Train_RMSE": 8544.245974985932,
+      "Test_RMSE": 18215.347607503798,
+      "Train_MAPE": 18.74700563809093,
+      "Test_MAPE": 15.392884229816886,
+      "Train_R2": 0.8343549106564048,
+      "Test_R2": 0.3630501425430853
+    },
+    {
+      "Model": "Random Forest",
+      "Train_MAE": 4163.067358388303,
+      "Test_MAE": 17390.427888248505,
+      "Train_RMSE": 5212.382629449529,
+      "Test_RMSE": 20533.10684986776,
+      "Train_MAPE": 13.27224540872765,
+      "Test_MAPE": 22.884952105325702,
+      "Train_R2": 0.9383541765608041,
+      "Test_R2": 0.19064388517434472
+    },
+    {
+      "Model": "Historical Baseline (Lag 12)",
+      "Train_MAE": 10013.848655172415,
+      "Test_MAE": 19342.36387142857,
+      "Train_RMSE": 12644.806406517475,
+      "Test_RMSE": 22211.75151428613,
+      "Train_MAPE": 24.416395218032257,
+      "Test_MAPE": 25.17070992012456,
+      "Train_R2": 0.6372098812624264,
+      "Test_R2": 0.05289979501560371
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Train_MAE": 523.0207055934737,
+      "Test_MAE": 20256.546723767937,
+      "Train_RMSE": 613.7467970906345,
+      "Test_RMSE": 23825.42924579585,
+      "Train_MAPE": 1.6041464748838652,
+      "Test_MAPE": 26.64597724993675,
+      "Train_R2": 0.9991453081594651,
+      "Test_R2": -0.08971213064806904
+    },
+    {
+      "Model": "Linear Regression",
+      "Train_MAE": 3425.8998681392986,
+      "Test_MAE": 20351.01151556579,
+      "Train_RMSE": 4283.881795093643,
+      "Test_RMSE": 25513.097240259172,
+      "Train_MAPE": 10.222425149164543,
+      "Test_MAPE": 26.543764517846043,
+      "Train_R2": 0.9583604489678343,
+      "Test_R2": -0.2495587690030443
+    }
+  ],
+  "top_features_extra_trees": {
+    "Sales_Lag_12": 0.3487553580640468,
+    "Month": 0.1520766865449611,
+    "Is_Q4": 0.11320769353352354,
+    "Month_Cos": 0.04554109458653282,
+    "Sales_YoY_Growth": 0.034719523784170564,
+    "Sales_Lag_6": 0.030694716977405306,
+    "Sales_Lag_2": 0.028845011942509307,
+    "Sales_Rolling_Std_12": 0.027830894251177463,
+    "Quarter": 0.027368081155633616,
+    "Sales_Rolling_Mean_6": 0.02213586560593745
+  },
+  "top_features_random_forest": {
+    "Sales_Lag_12": 0.4915777190310458,
+    "Month": 0.18671547051714055,
+    "Sales_Rolling_Std_12": 0.03549081150616489,
+    "Sales_Rolling_Mean_12": 0.03116621395935134,
+    "Sales_YoY_Growth": 0.024977956045030347,
+    "Sales_Lag_6": 0.02422022615062365,
+    "Is_Q4": 0.019657750247223736,
+    "Sales_Rolling_Std_3": 0.017892324144933205,
+    "Cat_Furniture_Sales_Lag_1": 0.01735503348097931,
+    "Sales_Lag_2": 0.015887418931845417
+  }
+}

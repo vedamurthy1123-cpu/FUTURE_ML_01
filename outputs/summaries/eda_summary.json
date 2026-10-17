@@ -1,0 +1,103 @@
+{
+  "dataset_name": "superstore_cleaned.csv",
+  "rows": 9994,
+  "columns": 20,
+  "date_range": {
+    "min_date": "2014-01-03",
+    "max_date": "2017-12-30",
+    "total_days": 1458
+  },
+  "totals": {
+    "total_sales": 2297200.8603,
+    "total_profit": 286397.0217,
+    "total_quantity": 37873,
+    "total_orders": 5009
+  },
+  "descriptive_stats": {
+    "Sales": {
+      "count": 9994.0,
+      "mean": 229.85800083049827,
+      "std": 623.2451005086807,
+      "min": 0.444,
+      "25%": 17.28,
+      "50%": 54.489999999999995,
+      "75%": 209.94,
+      "max": 22638.48
+    },
+    "Quantity": {
+      "count": 9994.0,
+      "mean": 3.789573744246548,
+      "std": 2.2251096911414,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 5.0,
+      "max": 14.0
+    },
+    "Discount": {
+      "count": 9994.0,
+      "mean": 0.15620272163297977,
+      "std": 0.20645196782571615,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.2,
+      "75%": 0.2,
+      "max": 0.8
+    },
+    "Profit": {
+      "count": 9994.0,
+      "mean": 28.65689630778467,
+      "std": 234.2601076909573,
+      "min": -6599.978,
+      "25%": 1.72875,
+      "50%": 8.6665,
+      "75%": 29.364,
+      "max": 8399.976
+    }
+  },
+  "yearly_sales": {
+    "2014.0": 484247.4981,
+    "2015.0": 470532.509,
+    "2016.0": 609205.598,
+    "2017.0": 733215.2552
+  },
+  "category_sales": {
+    "Technology": 836154.033,
+    "Furniture": 741999.7953,
+    "Office Supplies": 719047.032
+  },
+  "region_sales": {
+    "West": 725457.8245,
+    "East": 678781.24,
+    "Central": 501239.8908,
+    "South": 391721.905
+  },
+  "segment_sales": {
+    "Consumer": 1161401.345,
+    "Corporate": 706146.3668,
+    "Home Office": 429653.1485
+  },
+  "loss_making_stats": {
+    "count": 1871,
+    "percentage": 18.721232739643785,
+    "total_loss": -156131.2857
+  },
+  "correlations": {
+    "sales_profit": 0.4790643497377087,
+    "discount_profit": -0.21948745637176756,
+    "discount_sales": -0.028190124157535648,
+    "quantity_sales": 0.20079477137389667
+  },
+  "seasonality_peaks": [
+    "September",
+    "November",
+    "December (Q4 Peak)"
+  ],
+  "forecasting_key_findings": [
+    "Strong Q4 seasonality driven by holiday demand spikes in Nov and Dec.",
+    "Consistent YoY growth from 2014 ($484k) to 2017 ($733k).",
+    "7-day and 30-day moving averages capture clear trend cycles.",
+    "Technology category generates highest sales ($836k) and profit ($145k).",
+    "Discounts > 20% severely destroy profitability (negative correlation r = -0.219)."
+  ]
+}

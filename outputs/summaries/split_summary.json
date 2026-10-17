@@ -1,0 +1,30 @@
+{
+  "source_dataset": "superstore_features.csv",
+  "total_observations": 36,
+  "split_ratio": {
+    "train_percentage": 80.56,
+    "test_percentage": 19.44
+  },
+  "train_set": {
+    "rows": 29,
+    "columns": 27,
+    "start_date": "2015-01",
+    "end_date": "2017-05",
+    "target_mean_sales": 44264.3315,
+    "target_sum_sales": 1283665.6135
+  },
+  "test_set": {
+    "rows": 7,
+    "columns": 27,
+    "start_date": "2017-06",
+    "end_date": "2017-12",
+    "target_mean_sales": 75612.53552857143,
+    "target_sum_sales": 529287.7487
+  },
+  "leakage_checks": {
+    "chronological_ordering_verified": true,
+    "random_shuffle_applied": false,
+    "target_isolated": true,
+    "zero_leakage_confirmed": true
+  }
+}

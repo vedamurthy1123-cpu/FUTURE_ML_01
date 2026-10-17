@@ -1,0 +1,14 @@
+{
+  "model_name": "Extra Trees Regressor",
+  "target_variable": "Sales",
+  "training_period": "2015-01 to 2017-05 (29 months)",
+  "testing_period": "2017-06 to 2017-12 (7 months)",
+  "number_of_features": 25,
+  "test_RMSE": 18103.976006660767,
+  "test_MAE": 15942.648412938272,
+  "test_MAPE": 21.03835013133947,
+  "test_R2": 0.37081516171065976,
+  "selection_reason": "Achieved lowest out-of-sample Test RMSE ($18,103.98) and highest Test R2 (0.3708), beating historical baseline by +18.49% RMSE reduction.",
+  "model_file": "model_outputs/final_sales_forecasting_model.pkl",
+  "scaler_file": "model_outputs/scaler.pkl"
+}

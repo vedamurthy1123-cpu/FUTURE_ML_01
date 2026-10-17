@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Superstore Sales & Revenue Intelligence Dashboard",
+  title: "VikrayVridhi – Sales & Revenue Intelligence Dashboard",
   description:
-    "Executive interactive sales dashboard for Superstore business performance. Explore 4-year historical sales trends, quarterly seasonality dynamics, and 2018 forward revenue forecasts.",
+    "Executive interactive sales dashboard for business performance. Explore 4-year historical sales trends, quarterly seasonality dynamics, and 2018 forward revenue forecasts.",
   keywords: [
+    "VikrayVridhi",
     "sales dashboard",
     "revenue forecast",
     "business intelligence",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     "seasonal demand",
     "executive KPI",
   ],
-  authors: [{ name: "Superstore Analytics" }],
+  authors: [{ name: "VikrayVridhi" }],
 };
 
 export default function RootLayout({

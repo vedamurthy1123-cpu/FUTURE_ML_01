@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <a href="#" className="nav-brand">
           <div className="nav-logo-icon">📈</div>
-          <span>Superstore Analytics</span>
+          <span>VikrayVridhi</span>
         </a>
         <ul className="nav-links">
           {navLinks.map((l) => (

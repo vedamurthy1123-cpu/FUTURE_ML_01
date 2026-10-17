@@ -298,7 +298,7 @@ export default function Home() {
         {/* ─── Footer ─── */}
         <footer className="footer">
           <div className="container">
-            <div className="footer-logo gradient-text">Superstore Analytics</div>
+            <div className="footer-logo gradient-text">VikrayVridhi</div>
             <div className="footer-sub">
               Executive Sales Intelligence &amp; 2018 Revenue Forecasting
             </div>

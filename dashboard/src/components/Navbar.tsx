@@ -7,6 +7,7 @@ const navLinks = [
   { href: "#holiday-surge", label: "Holiday Surge" },
   { href: "#future", label: "2018 Forecast" },
   { href: "#insights", label: "Strategic Insights" },
+  { href: "#performance", label: "Model Performance" },
 ];
 
 export default function Navbar() {

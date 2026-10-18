@@ -5,6 +5,9 @@ import QuarterlyTrends from "@/components/QuarterlyTrends";
 import FutureForecast2018 from "@/components/FutureForecast2018";
 import HolidaySurgeAnalysis from "@/components/HolidaySurgeAnalysis";
 import BusinessInsights from "@/components/BusinessInsights";
+import ModelComparison from "@/components/ModelComparison";
+import ForecastChart from "@/components/ForecastChart";
+import PipelineStages from "@/components/PipelineStages";
 
 export default function Home() {
   return (
@@ -292,6 +295,149 @@ export default function Home() {
             </div>
 
             <BusinessInsights />
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════
+            MACHINE LEARNING MODEL PERFORMANCE
+            ═══════════════════════════════════ */}
+        <section className="section" id="performance">
+          <div className="container">
+            <div className="section-header">
+              <div className="section-tag">ML Architecture &amp; Benchmarks</div>
+              <h2 className="section-title">
+                Machine Learning{" "}
+                <span className="gradient-text">Model Performance &amp; Evaluation</span>
+              </h2>
+              <div className="gradient-divider" />
+              <p className="section-desc">
+                Rigorous out-of-sample evaluation across 6 regression architectures on unseen 
+                test data (June – December 2017). Extra Trees Regressor was selected for attaining the lowest 
+                Test RMSE ($18,103.98) and highest variance explained (R² = 0.3708), beating the historical baseline by +18.49%.
+              </p>
+            </div>
+
+            {/* Model Performance KPI Highlights */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: 14,
+                marginBottom: 24,
+              }}
+            >
+              <div
+                className="glass-sm"
+                style={{
+                  padding: "16px 18px",
+                  borderLeft: "3px solid #4f8cff",
+                  background: "linear-gradient(135deg, rgba(79,140,255,0.06), rgba(255,255,255,0.02))",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "#4f8cff", fontWeight: 700, letterSpacing: 0.5 }}>
+                  🥇 Selected Architecture
+                </div>
+                <div style={{ fontSize: "1.4rem", fontWeight: 800, color: "#f0f4ff", margin: "4px 0" }}>
+                  Extra Trees
+                </div>
+                <div style={{ fontSize: "0.76rem", color: "#94a3b8" }}>
+                  Rank 1 out of 6 models evaluated
+                </div>
+              </div>
+
+              <div
+                className="glass-sm"
+                style={{
+                  padding: "16px 18px",
+                  borderLeft: "3px solid #10b981",
+                  background: "linear-gradient(135deg, rgba(16,185,129,0.06), rgba(255,255,255,0.02))",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "#10b981", fontWeight: 700, letterSpacing: 0.5 }}>
+                  📉 Out-of-Sample RMSE
+                </div>
+                <div style={{ fontSize: "1.4rem", fontWeight: 800, color: "#f0f4ff", margin: "4px 0" }}>
+                  ₹15.12 Lakhs
+                </div>
+                <div style={{ fontSize: "0.76rem", color: "#10b981", fontWeight: 600 }}>
+                  -18.49% error vs Seasonal Baseline
+                </div>
+              </div>
+
+              <div
+                className="glass-sm"
+                style={{
+                  padding: "16px 18px",
+                  borderLeft: "3px solid #a855f7",
+                  background: "linear-gradient(135deg, rgba(168,85,247,0.06), rgba(255,255,255,0.02))",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "#a855f7", fontWeight: 700, letterSpacing: 0.5 }}>
+                  🎯 Test R² Score
+                </div>
+                <div style={{ fontSize: "1.4rem", fontWeight: 800, color: "#f0f4ff", margin: "4px 0" }}>
+                  0.3708
+                </div>
+                <div style={{ fontSize: "0.76rem", color: "#94a3b8" }}>
+                  Explains 37.1% of unseen sales variance
+                </div>
+              </div>
+
+              <div
+                className="glass-sm"
+                style={{
+                  padding: "16px 18px",
+                  borderLeft: "3px solid #fbbf24",
+                  background: "linear-gradient(135deg, rgba(251,191,36,0.06), rgba(255,255,255,0.02))",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "#fbbf24", fontWeight: 700, letterSpacing: 0.5 }}>
+                  📏 Mean Absolute Error (MAE)
+                </div>
+                <div style={{ fontSize: "1.4rem", fontWeight: 800, color: "#f0f4ff", margin: "4px 0" }}>
+                  ₹13.31 Lakhs
+                </div>
+                <div style={{ fontSize: "0.76rem", color: "#94a3b8" }}>
+                  21.04% Mean Absolute Percentage Error
+                </div>
+              </div>
+            </div>
+
+            {/* Model Comparison Card */}
+            <div className="glass chart-card">
+              <div className="chart-title" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
+                <span>📊 6-Model Benchmark Comparison (Out-of-Sample Test)</span>
+                <span className="badge badge-accent" style={{ fontSize: "0.75rem", padding: "4px 10px", borderRadius: 20 }}>
+                  Strict Chronological Isolation
+                </span>
+              </div>
+              <div className="chart-subtitle">
+                Compare RMSE, MAE, MAPE, and R² across Random Forest, Ridge, Gradient Boosting, Linear Regression, and Baseline
+              </div>
+              <ModelComparison />
+            </div>
+
+            {/* Test Forecast & Residuals Diagnostics Card */}
+            <div className="glass chart-card" style={{ marginTop: 28 }}>
+              <div className="chart-title">
+                📈 Test Period Diagnostics &amp; Residual Analysis (Jun – Dec 2017)
+              </div>
+              <div className="chart-subtitle">
+                Evaluate actual vs predicted trajectory, monthly residuals (Actual − Predicted), and percentage error
+              </div>
+              <ForecastChart />
+            </div>
+
+            {/* End-to-End Pipeline Stages Card */}
+            <div className="glass chart-card" style={{ marginTop: 28 }}>
+              <div className="chart-title">
+                🔄 End-to-End Machine Learning Pipeline Architecture
+              </div>
+              <div className="chart-subtitle">
+                The 8 sequential stages powering the forecasting system from raw ingestion to 2018 predictions
+              </div>
+              <PipelineStages />
+            </div>
           </div>
         </section>
 

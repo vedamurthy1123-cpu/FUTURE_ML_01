@@ -11,6 +11,7 @@ import {
   Legend,
   ReferenceLine,
   BarChart,
+  Cell,
 } from "recharts";
 import { testForecastResults } from "@/lib/data";
 import { useState } from "react";
@@ -124,7 +125,7 @@ export default function ForecastChart() {
             <ReferenceLine y={0} stroke="rgba(255,255,255,0.2)" />
             <Bar dataKey="residual" name="Residual (Actual − Pred)" radius={[4, 4, 0, 0]}>
               {data.map((d, i) => (
-                <rect
+                <Cell
                   key={i}
                   fill={d.residual > 0 ? "#f59e0b" : "#10b981"}
                 />
